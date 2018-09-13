@@ -18,7 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
+    UIApplicationShortcutItem *shareItem = [[UIApplicationShortcutItem alloc] initWithType:@"com.yuyangkk.share" localizedTitle:@"分享" localizedSubtitle:@"分享副标题" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeShare] userInfo:@{@"Name":@"Hello world"}];
+    [UIApplication sharedApplication].shortcutItems = @[shareItem];
 }
 
 
