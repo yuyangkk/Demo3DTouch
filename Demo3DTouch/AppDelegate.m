@@ -10,6 +10,8 @@
 
 @interface AppDelegate ()
 
+@property (nonatomic, strong) UIApplicationShortcutItem *shortcutItemToProcess;
+
 @end
 
 @implementation AppDelegate
@@ -17,6 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // 如果launchOptions包含相应的启动选项键，则主屏幕快速操作负责启动应用程序。 应用完成初始化后，我们可以存储快速操作以进行处理。
+    if (launchOptions[UIApplicationLaunchOptionsShortcutItemKey]) {
+        self.shortcutItemToProcess = launchOptions[UIApplicationLaunchOptionsShortcutItemKey];
+    }
     return YES;
 }
 
@@ -47,5 +54,10 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
+    // 程序已经加载到内存中，点击3D Touch中的一个快速操作，会调用该代理方法，我们也可以存储快速操作，以便处理
+    self.shortcutItemToProcess = shortcutItem;
+    
+}
 
 @end
