@@ -22,7 +22,12 @@
     
     // 如果launchOptions包含相应的启动选项键，则主屏幕快速操作负责启动应用程序。 应用完成初始化后，我们可以存储快速操作以进行处理。
     if (launchOptions[UIApplicationLaunchOptionsShortcutItemKey]) {
-        self.shortcutItemToProcess = launchOptions[UIApplicationLaunchOptionsShortcutItemKey];
+        UIApplicationShortcutItem *item = launchOptions[UIApplicationLaunchOptionsShortcutItemKey];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:item.localizedTitle message:[NSString stringWithFormat:@"传递过来的值是：%@",item.userInfo] preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:action];
+        [application.keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+        
     }
     return YES;
 }
@@ -56,7 +61,10 @@
 
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
     // 程序已经加载到内存中，点击3D Touch中的一个快速操作，会调用该代理方法，我们也可以存储快速操作，以便处理
-    self.shortcutItemToProcess = shortcutItem;
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:shortcutItem.localizedTitle message:[NSString stringWithFormat:@"传递过来的值是：%@",shortcutItem.userInfo] preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:action];
+    [application.keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
     
 }
 
