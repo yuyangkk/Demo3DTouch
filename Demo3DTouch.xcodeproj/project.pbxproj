@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B89D343214BA6E500049534 /* PopedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B89D342214BA6E500049534 /* PopedViewController.m */; };
 		4BA63642214A0F9D00D1F73D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA63641214A0F9D00D1F73D /* AppDelegate.m */; };
 		4BA63645214A0F9D00D1F73D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA63644214A0F9D00D1F73D /* MainViewController.m */; };
 		4BA63648214A0F9D00D1F73D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA63646214A0F9D00D1F73D /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B89D341214BA6E500049534 /* PopedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopedViewController.h; sourceTree = "<group>"; };
+		4B89D342214BA6E500049534 /* PopedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopedViewController.m; sourceTree = "<group>"; };
 		4BA6363D214A0F9D00D1F73D /* Demo3DTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo3DTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA63640214A0F9D00D1F73D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4BA63641214A0F9D00D1F73D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				4BA63641214A0F9D00D1F73D /* AppDelegate.m */,
 				4BA63643214A0F9D00D1F73D /* MainViewController.h */,
 				4BA63644214A0F9D00D1F73D /* MainViewController.m */,
+				4B89D341214BA6E500049534 /* PopedViewController.h */,
+				4B89D342214BA6E500049534 /* PopedViewController.m */,
 				4BA63646214A0F9D00D1F73D /* Main.storyboard */,
 				4BA63649214A0F9E00D1F73D /* Assets.xcassets */,
 				4BA6364B214A0F9E00D1F73D /* LaunchScreen.storyboard */,
@@ -265,6 +270,7 @@
 				4BA63645214A0F9D00D1F73D /* MainViewController.m in Sources */,
 				4BA63650214A0F9E00D1F73D /* main.m in Sources */,
 				4BA63642214A0F9D00D1F73D /* AppDelegate.m in Sources */,
+				4B89D343214BA6E500049534 /* PopedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J87FW37B62;
+				DEVELOPMENT_TEAM = C2496GYDRD;
 				INFOPLIST_FILE = Demo3DTouch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,7 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J87FW37B62;
+				DEVELOPMENT_TEAM = C2496GYDRD;
 				INFOPLIST_FILE = Demo3DTouch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
